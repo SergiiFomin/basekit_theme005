@@ -1010,14 +1010,14 @@ footer{
   }
 }
 
-#contact_text{
+div[id$="contact_text"]{
   font: bold 18px/20px 'Lora', serif;
   color: #712d15;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, .38);
   text-transform: uppercase;
   text-align: center;
 }
-#phone{
+div[id$="phone"]{
   font: bold 35px/40px 'Lora', serif;
   color: #a2a410;
   text-shadow: 2px 2px 4px rgba(169, 129, 129, .37);
@@ -1026,7 +1026,7 @@ footer{
 }
 
 .companyname,
-#copyright_copy{
+div[id$="copyright_copy"]{
   display: inline;
   div{
     display: inline;
@@ -1084,7 +1084,7 @@ footer{
     .gradient (#dfdfdf, #eeeeee);
     line-height: 20px;
     padding: 21px 20px 0;
-    #button{
+    div[id$="button"]{
       margin-right: -20px;
       .btn{
         background: none;
@@ -1098,7 +1098,7 @@ footer{
         padding: 0;
       }
     }
-    #content{
+    div[id$="content"]{
       padding-bottom: 7px;
     }
   }
@@ -1154,30 +1154,31 @@ footer{
   .indent{
     background-color: white;
     padding: 24px 18px 37px;
-    #blockquote{
+    div[id$="blockquote"]{
       text-align: center;
-      blockquote{
-        font-style: italic;
-        font-size: 25px;
-        line-height: 35px;
-        color: @color-swatch4;
-        border: none;
-        margin: 0 0 21px;
-        padding: 0;
-        &:before{
-          content: '"';
-        }
-        &:after{
-          content: '"';
-        }
-      }
     }
-    #button{
+    div[id$="button"]{
       .btn{
         font-size: 12px;
         line-height: 35px;
       }
     }
+  }
+}
+
+blockquote{
+  font-style: italic;
+  font-size: 25px;
+  line-height: 35px;
+  color: @color-swatch4;
+  border: none;
+  margin: 0 0 21px;
+  padding: 0;
+  &:before{
+    content: '"';
+  }
+  &:after{
+    content: '"';
   }
 }
 

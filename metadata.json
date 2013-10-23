@@ -1,17 +1,17 @@
 {
-  "name":"theme004",
+  "name":"theme005",
   "thumbnail":"theme_preview.png",
   "screenshot":"theme_preview.png",    
     "colorSwatches":
     {
         "Swatch 1": {
             "color1":"#ffffff",
-            "color2":"#f0e7d9",
-            "color3":"#83c028",
-            "color4":"#2f353e",
-            "color5":"#b4bec7",
-            "color6":"#434f5b",
-            "color7":"#ffffff"
+            "color2":"#9b6058",
+            "color3":"#a5a711",
+            "color4":"#f09f1a",
+            "color5":"#6f2c15",
+            "color6":"#3c3039",
+            "color7":"#dc986e"
         },
         "Swatch 2": {
             "color1":"#ffffff",
@@ -53,23 +53,17 @@
     "fontSwatch": {
        "title": "Arial",
         "font1": {
-            "font-size": "47px",
-            "line-height": "50px",
             "color": "@color-swatch1"
         },
         "font2": {
-            "font-family": "Open Sans",
-            "font-size": "30px",
-            "font-weight": "800",
-            "line-height": "35px",
-            "color": "@color-swatch1"
+            "font-size": "26px",
+            "line-height": "28px"
         },
         "font3": {
-            "font-family": "Arial",
-            "font-size": "20px",
+            "font-size": "17px",
             "font-weight": "inherit",
-            "line-height": "30px",
-            "color": "@color-swatch1"
+            "line-height": "20px",
+            "color": "@color-swatch3"
         },
         "font4": {
             "font-family": "Open Sans",
