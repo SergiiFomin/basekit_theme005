@@ -300,8 +300,6 @@ header{
   }
 }
 
-.bg-glow{}
-
 .logo{
   display: block;
   margin: 20px 0;
@@ -666,7 +664,7 @@ h3{
   padding-bottom: 15px;
 }
 
-#color{
+[id$="color"]{
   h3{
     color: @color-swatch3;
   }
@@ -782,7 +780,7 @@ hr{
 /*--- content end ------*/
 
 .widget{
-  &#left{
+  &[id$="left"]{
     float: left;
     margin-right: 28px;
   }
@@ -857,110 +855,6 @@ footer{
 a{
   div{
     display: inline;
-  }
-}
-
-/* ==================================
-   SOCIAL BAR WIDGET / SOCIAL PROFILE
-   =============================== */
-
-.widget.socialicons, 
-.widget.profile .bk-profile-socialicons {
-  padding: 0px;
-  font-size: 1em;
-  margin-bottom: 30px;
-  a{
-    text-decoration: none;
-    text-indent: -9999px;
-    white-space: nowrap;
-  }
-  span {
-    display: inline-block;
-    a{
-      display: inline-block;
-      width: 34px;
-      height: 34px;
-      .border-radius(3px);
-      position: relative;
-      .transition(all .2s linear);
-      &:before{
-        position: absolute;
-        left: 0%;
-        margin-left: 0px;
-        display: block;
-        width: 34px;
-        height: 34px;
-        color: #aa9d98;
-        font: 15px/34px FontAwesome;
-        text-indent: 0;
-        .transition(all .2s linear);
-        color: @color-swatch1;
-        background: rgba(255, 255, 255, .15);
-        .border-radius(1000px);
-        text-align: center;
-      }
-      &:hover{
-        &:before{
-          background-color: @color-swatch3;
-        }
-      }
-    }
-  }
-}
-
-/* SVG ICONS */
-
-.svg .widget.socialicons span.bk-socialicons-twitter a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a,
-.widget.socialicons span.bk-socialicons-twitter a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-twitter a {
-  &:before{
-    content: "\f099";
-  }
-}
-
-.svg .widget.socialicons span.bk-socialicons-linkedin a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a,
-.widget.socialicons span.bk-socialicons-linkedin a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-linkedin a {
-  &:before{
-    content: "\f0e1";
-  }
-}
-
-.svg .widget.socialicons span.bk-socialicons-facebook a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a,
-.widget.socialicons span.bk-socialicons-facebook a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-facebook a {
-  &:before{
-    content: "\f09a";
-  }
-}
-
-.svg .widget.socialicons span.bk-socialicons-rss a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-rss a,
-.widget.socialicons span.bk-socialicons-rss a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-rss a {
-  &:before{
-    content: "\f09e";
-  }
-}
-
-.svg .widget.socialicons span.bk-socialicons-googleplus a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a,
-.widget.socialicons span.bk-socialicons-googleplus a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-googleplus a {
-  &:before{
-    content: "\f0d5";
-  }
-}
-
-.svg .widget.socialicons span.bk-socialicons-youtube a,
-.svg .widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a,
-.widget.socialicons span.bk-socialicons-youtube a,
-.widget.profile .bk-profile-socialicons span.bk-socialicons-youtube a {
-  &:before{
-    content: "\f167";
   }
 }
 
@@ -1047,11 +941,11 @@ div[id$="copyright_copy"]{
     float: left;
     margin-right: 20px;
     text-transform: uppercase;
-    #day{
+    [id$="day2"], [id$="day2"], [id$="day3"], [id$="day4"]{
       font: bold 36px/36px 'Lora', serif;
       color: @color-swatch3;
     }
-    #month{
+    [id$="month1"], [id$="month2"], [id$="month3"], [id$="month4"]{
       font: bold 20px/20px 'Lora', serif;
       color: @color-swatch4;
     }
