@@ -368,6 +368,10 @@ header{
       width: 40px !important;
       text-indent: 9999em;
       overflow: hidden;
+      .opacity: 1;
+      &:hover{
+        background: none;
+      }
     }
     .btn-prev{
       background-position: 0 0;
@@ -511,11 +515,9 @@ header, footer, #content{
   margin: 0;
   li{
     float: left;
-    background: white;
     list-style: none;
     width: 23%;
     margin: 0 1% 20px;
-    padding-bottom: 20px;
     .inner{
       background: none !important;
       a{
@@ -627,6 +629,7 @@ h1{
   &.brand{
     font: 50px/60px 'Shojumaru', cursive;
     margin: 0 0 0px;
+    padding: 0;
     a{
       color: @color-swatch1;
       display: inline-block;
@@ -941,7 +944,7 @@ div[id$="copyright_copy"]{
     float: left;
     margin-right: 20px;
     text-transform: uppercase;
-    [id$="day2"], [id$="day2"], [id$="day3"], [id$="day4"]{
+    [id$="day1"], [id$="day2"], [id$="day3"], [id$="day4"]{
       font: bold 36px/36px 'Lora', serif;
       color: @color-swatch3;
     }
