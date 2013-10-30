@@ -368,7 +368,7 @@ header{
       width: 40px !important;
       text-indent: 9999em;
       overflow: hidden;
-      .opacity: 1;
+      opacity: 1 !important;
       &:hover{
         background: none;
       }
@@ -424,45 +424,6 @@ header{
 
 /*------ content ------- */
 
-/*bootstrap classes*/
-
-.img-polaroid{  
-  padding: 0px;
-  box-shadow: none;
-  border: none;
-  .box-sizing(border-box);
-  .box-shadow(0 0 0);
-  >img{
-    max-width: inherit;
-    width: 100%;
-  }
-}
-
-.dl-horizontal{
-  dt{
-    float: left;
-    margin-right: 5px;
-    width: 25px;
-    text-align: left;
-    time{
-      text-transform: uppercase;
-      span{
-        display: block;
-      }
-    }
-  }
-  dd{
-    position: relative;
-    display: block;
-    overflow: hidden;
-    margin-left: 0;
-    padding: 0px 0px 0px 0px;
-    &.last {
-      padding-bottom: 0;
-    }
-  }
-}
-
 .btn {
   display: inline-block;
   font: bold 12px/38px 'Lora', serif;
@@ -475,9 +436,6 @@ header{
   text-shadow: none;
   color: @color-swatch1;
   text-decoration: none;
-  /*background-image:image('/images/template/btn.gif');
-  background-position: 0 0;
-  background-repeat: repeat-x;*/
   .gradient (#c3c517, #86880b);
   box-shadow: 2px 2px 6px rgba(169, 129, 129, .39);
   &:hover {
@@ -667,7 +625,7 @@ h3{
   padding-bottom: 15px;
 }
 
-[id$="color"]{
+div[id$="color"]{
   h3{
     color: @color-swatch3;
   }
@@ -855,6 +813,7 @@ footer{
     }
   }
 }
+
 a{
   div{
     display: inline;
