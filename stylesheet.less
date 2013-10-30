@@ -959,7 +959,7 @@ div[id$="copyright_copy"]{
   .title{
     background-image:image('/images/template/image_title.jpg');
     background-position: center 0;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     .border-top-left-radius(6px);
     .border-top-right-radius(6px);
     text-align: center;
@@ -1091,13 +1091,38 @@ blockquote{
 ========================================================================*/
 
 /* Large desktop */
-@media (max-width: 1200px) {} 
+@media (max-width: 1200px) {
+  .widget .navigation ul li a {
+    padding: 47px 10px 60px;
+  }
+  .btn {
+    padding: 0 24px;
+  }
+  blockquote {
+    font-size: 20px;
+  }
+  div[id$="phone"] {
+    font-size: 28px;
+  }
+}
 
 /*== Up to 980px ======================================================
 ========================================================================*/
 
 /* Narrow desktop */
-@media (max-width: 980px) {}
+@media (max-width: 980px) {
+
+  .widget .navigation ul {
+    font-size: 13px;
+  }
+  .btn {
+    font-size: 10px;
+    padding: 0 10px;
+  }
+  div[id$="phone"] {
+    font-size: 22px;
+  }
+}
 
 /*== Up to 980px and beyond 768px ======================================
 ========================================================================*/
@@ -1110,7 +1135,22 @@ blockquote{
 ========================================================================*/
 
 /* Landscape phone to portrait tablet */
-@media (max-width: 767px){}
+@media (max-width: 767px){
+
+  h1.brand {
+    text-align: center;
+  }
+
+  .widget .navigation ul {
+    display: table;
+    margin: 0 auto 20px;
+    li{
+      a{
+        padding: 20px 10px;
+      }
+    }
+  }
+}
 
 /*== Up to 640px ==================================================
 ====================================================================*/
