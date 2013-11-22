@@ -28,6 +28,13 @@
 @bodyBackground:        @color-swatch6;
 @textColor:             @color-swatch2;
 
+// Social
+// -------------------------
+@socialColor:             #e5e4e4;
+@socialColorHover:        #fffefe;
+@socialBackground:        @color-swatch1;
+@socialBackgroundHover:   #ce4e48;
+
 // Links
 // -------------------------
 @linkColor:             @color-swatch3;
@@ -300,12 +307,8 @@ header{
   }
 }
 
-.logo{
-  display: block;
-  margin: 20px 0;
-  a{
-    display: inline-block;
-  }   
+.widget.logo{
+  margin: 20px 0 0;  
 }
 
 /*menu*/
@@ -418,6 +421,20 @@ header{
       bottom: 0;
     }
   }
+  .content-wrapper{
+    position: absolute;
+    bottom: 0;
+    padding: 20px 0;
+    text-align: center;
+    width: 100%;
+    top: auto !important;
+    overflow: visible;
+    .title{
+      font: 30px/40px 'Shojumaru', cursive;
+      display: block;
+    }
+    .description{}
+  }
 }
 
 /*--- header end ------*/
@@ -466,33 +483,6 @@ header{
 header, footer, #content{
   ul{
     list-style: none;
-  }
-}
-
-.gallery-widget{
-  margin: 0;
-  li{
-    float: left;
-    list-style: none;
-    width: 23%;
-    margin: 0 1% 20px;
-    .inner{
-      background: none !important;
-      a{
-        color: inherit;
-        text-decoration: none;
-        img{
-          margin-bottom: 15px;
-        }
-        span{
-          display: block;
-          text-align: center;
-        }
-        &:hover{
-          color: inherit;
-        }
-      }
-    }
   }
 }
 
@@ -1035,6 +1025,214 @@ blockquote{
   }
   &:after{
     content: '"';
+  }
+}
+
+.gallery-widget{
+  margin: 0;
+  overflow: hidden;
+  li{
+    float: left;
+    list-style: none;
+    width: 23%;
+    margin: 0 1% 20px;
+    .inner{
+      background: none !important;
+      a{
+        color: inherit;
+        text-decoration: none;
+        img{
+          margin-bottom: 15px;
+        }
+        span{
+          display: block;
+          text-align: center;
+        }
+        &:hover{
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+
+.widget.tweet {
+   padding: 14px 0;
+   a {
+    padding: 8px 10px 8px 32px;
+    margin: 0;
+    border: 1px solid #057ed0;
+    background-image: image('/images/twitter.png');
+    background-repeat: no-repeat;
+    background-position: 10px;
+
+    margin: 0em;
+    .border-radius(4px);
+    box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);
+    font-size:.9em;
+    background-color: #32bbef;
+    color: @color-swatch1;
+    text-decoration: none;
+    text-shadow: 0 1px 0px rgba(0,0,0,0.3);
+    cursor: pointer;
+    &:hover, &:active {
+      border: 1px solid #096eb3;
+      background-color: #2cacdc;
+    }
+  }
+}
+
+.twitter{
+  ul.twitter{
+    margin: 0;
+    li{
+      list-style: none;
+      margin-bottom: 18px;
+      overflow: hidden;
+      .twitter-profile-pic{
+        float: left;margin-right: 20px;
+      }
+      .twitter-content{
+        p{
+          padding-bottom: 0px;
+        }
+      }
+    }
+  }
+}
+
+/* ===============================
+   TWEET THIS WIDGET
+   =============================== */
+
+.widget.tweet {
+   padding: 14px 0; 
+}
+
+.widget.tweet a {
+  padding: 8px 10px 8px 32px;
+  margin: 0;
+  border: 1px solid #057ed0;
+  background-image: image('/images/twitter.png');
+  background-repeat: no-repeat;
+  background-position: 10px;
+
+  margin: 0em;
+  .border-radius(4px);
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4);
+  font-size:.9em;
+  background-color: #32bbef;
+  color: @color-swatch1;
+  text-decoration: none;
+  text-shadow: 0 1px 0px rgba(0,0,0,0.3);
+}
+
+.widget.tweet a:hover, .tweet a:active {
+  border: 1px solid #096eb3;
+  padding: 8px 10px 8px 32px;
+  background-image: image('/images/twitter.png');
+  background-repeat: no-repeat;
+  background-position: 10px;
+  cursor: pointer;
+  background-color: #2cacdc;
+  cursor: pointer;
+}
+
+.widget.clicktocall a {
+  background-image: image('/images/ic-call.png');
+  background-color: @color-swatch3;
+  background-position: 10px;
+  background-repeat: no-repeat;
+  padding: 10px 10px 10px 38px;
+  margin: 0;
+  color: @color-swatch1;
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  &:hover {
+    /*background-image: image('/images/ic-call.png');*/
+    background-color: @color-swatch2;
+    text-decoration: none;
+  }
+}
+
+.socialicons{
+  overflow: hidden;
+  .icons {
+    float: right;
+    overflow: hidden;
+    span{
+      float: left;
+      margin-left: 5px;
+      a{
+        position: relative;
+        font-size: 0;
+        line-height: 0;
+        text-decoration: none;
+        display: block;
+        width: 30px;
+        height: 30px;
+        background-color: @socialBackground;
+        color: @socialColor;
+        font-size: 0;
+        line-height: 0;
+        .transition(all .2s linear);
+        &:hover{
+          background-color: @socialBackgroundHover;
+          color: @socialColorHover;
+        }
+        &:before{
+          display: block;
+          width: 30px;
+          height: 30px;
+          text-align: center;
+          font: 15px/30px 'FontAwesome';
+          .transition(all .2s linear);
+        }
+      }
+      &.bk-socialicons-linkedin{
+        a{
+          &:before{
+            content: "\f0e1";
+          }
+        }
+      }
+      &.bk-socialicons-twitter{
+        a{
+          &:before{
+            content: "\f099";
+          }
+        }
+      }
+      &.bk-socialicons-facebook{
+        a{
+          &:before{
+            content: "\f09a";
+          }
+        }
+      }
+      &.bk-socialicons-rss{
+        a{
+          &:before{
+            content: "\f09e";
+          }
+        }
+      }
+      &.bk-socialicons-googleplus{
+        a{
+          &:before{
+            content: "\f0d5";
+          }
+        }
+      }
+      &.bk-socialicons-youtube{
+        a{
+          &:before{
+            content: "\f167";
+          }
+        }
+      }
+    }
   }
 }
 
